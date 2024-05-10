@@ -310,7 +310,7 @@ header .list li a:hover{
     }
     
     #main-smartphone .image-title1 p:nth-child(1){
-    top: 37%;
+    top: 40%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
