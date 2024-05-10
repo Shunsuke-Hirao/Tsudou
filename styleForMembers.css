@@ -1,0 +1,641 @@
+html{
+    font-size: 100%; /*16px*/
+    /* width: 960px; */
+}
+body{
+    color: #24292e;
+    font-family: "Noto Serif JP", serif;
+    margin: 0;
+    padding: 0; 
+    animation: opacity-body 1s ease-in-out;
+}
+@keyframes opacity-body{
+    0%{
+        opacity: 0;
+    }
+    
+    100%{
+        opacity: 1;
+    }
+}
+
+/* nav */
+header nav{
+    display: block;
+    background-color: #fff;
+    width: 240px;
+    position: fixed;
+    z-index: 4;
+    padding-top: 8px;
+    padding-left: 8px;
+    top: 0;
+    bottom: 0;
+    left: -245px;
+    opacity: 0; 
+    transition:all 0.5s;
+}
+
+.open nav{/* open ver */
+    left: 0;
+    opacity: 1;
+}
+
+header #navlist nav>span{
+    display: block;
+    margin-bottom: 20px;
+}
+
+header #navlist nav span img{
+    object-position: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+}
+
+
+/* .languagechoose */
+header nav .languagechoose{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin: 10px auto;
+}
+
+header nav .languagechoose li:nth-child(1){
+    border-right: 1px solid black;
+}
+
+header nav .languagechoose li a{
+    transition-duration: 0.2s;
+    text-decoration: none;
+    color:#24292e;
+    text-align: center;
+}
+
+header nav .languagechoose li a:hover{
+    background-color: #e4e4e4;
+    
+}
+
+header nav .languagechoose li:nth-child(1) a{
+    padding: 10px 5px 10px 85px;
+}
+
+header nav .languagechoose li:nth-child(2) a{
+    padding: 10px 85px 10px 5px;
+}
+/* end of .languagechoose */
+
+/* .list */
+header .list{
+    display: block;
+    margin: 35px 0;
+    list-style: none;
+}
+
+header .list li{
+    width: 100%;
+    margin: 0;
+}
+
+header .list li a{
+    padding: 25px 0 20px 5px;
+    transition-duration: 0.2s;
+    text-decoration: none;
+    color:#24292e;
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+}
+
+header .list li a:hover{
+    background-color: #e4e4e4;
+}
+/* end of .list */
+    /* end of navlist */
+
+
+/* toggle-btn */
+.toggle-btn{
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 75px;
+    height: 70px;
+    z-index: 4;
+    cursor: pointer;
+    background: #333333;
+    opacity: 0.9;
+}
+
+.toggle-btn span{
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.5s;
+    border-radius: 4px;
+}
+
+.toggle-btn span:nth-child(1){
+    top: 22px;
+    left: 23px;
+}
+
+.toggle-btn span:nth-child(2){
+    top: 35px;
+    left: 23px;
+}
+
+.toggle-btn span:nth-child(3){
+    bottom: 20px;
+    left: 23px;
+}
+
+.open .toggle-btn{
+    background: none;
+}
+.open .toggle-btn span{
+    background-color: #ffffff;
+}
+
+.open .toggle-btn span:nth-child(1){
+    transform: translateY(10px) rotate(-315deg);
+    width: 44px;
+    left: 15px;
+    top: 27px;
+}
+
+.open .toggle-btn span:nth-child(2){
+    opacity: 0;
+}
+
+.open .toggle-btn span:nth-child(3){
+    transform: translateY(-10px) rotate(315deg);
+    width: 44px;
+    left: 15px;
+}
+/* end of toggle */
+
+/* hide */
+#hide{
+    display: none;
+    transition: all 0.5s;
+}
+
+.open #hide{
+    display: block;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    opacity: 0.8;
+    cursor: pointer;
+    z-index: 3;
+}
+/* end of hide */
+
+
+/* #profile */
+#profile{
+    position: relative;
+    height: 800px;
+}
+#profile::before{
+    content: "";
+    background: url(image/work5.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+    clip-path: none;
+    opacity: 0.2;
+}
+
+#profile .background-rotate{
+    position: absolute;
+    top: -140px;
+    height: 100%;
+    width: 100%;
+    background: #FFFF66;
+    opacity: 0.7;
+    z-index: -1;
+    clip-path: polygon(0 23.5vw, 100% 0, 100% calc(100% - 23.5vw), 0 100%);
+}
+#profile h2{
+    text-align: center;
+    font-size: 2rem;
+    padding: 18px 0;
+    margin-bottom:20px ;
+}
+#profile .memberLists{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#profile .memberLists .member{
+    width: 29%;
+    margin: 0 2% 15px 0;
+}
+#profile .memberLists .member p em{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+#profile .memberLists .member p{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 800;
+    background: #fff;
+    border-radius: 15px;
+    padding: 5px;
+}
+#profile .member .pic{
+    width: 130px;
+    height: 130px;
+    margin: 0 auto;
+}
+#profile .member .pic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+/* #leader */
+#leader{
+    margin: 45px auto;
+}
+#leader .carrer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#leader .picLeader{
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+}
+#leader .picLeader img{
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    margin: 0 auto;
+    object-fit: cover;
+}
+#leader .lists{
+    margin: 25px 0;
+    width: 55%;
+}
+#leader .lists .name{
+    display: flex;
+    justify-content: left;
+    margin: 5px 0;
+}
+#leader .lists .name h3:first-child{
+    margin-right: 35px;
+}
+
+
+/* #activity */
+/* Javascript lists*/
+#activity .maintitle{
+    text-align: center;
+    margin: 110px auto 180px auto;
+    font-size: 2rem;
+}
+
+.subtitle{
+    color: #000;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom:50px;
+    font-size: 1.8rem;
+    opacity: 0;
+}
+.subtitle.active{
+    opacity: 1;
+    transition: all 1s;
+}
+.viewarea{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100vh;
+}
+.articleP{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #000;
+    opacity: 0;
+}
+.articleP.active{
+    opacity: 1;
+    transition: all 2.5s;
+}
+
+.img-wrap{
+    width: 100%;
+    overflow: hidden;
+    opacity: 0;
+}
+.img-wrap.active{
+    opacity: 1;
+    transition: all 2s;
+}
+.imgActivity{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    margin: 0;   
+}
+#activity .awaza .videoawaza{
+    width: 55%;
+    height: 60%;
+    opacity: 0;
+}
+#activity .awaza .videoawaza.active{
+    opacity: 1;
+    transition: all 2s;
+}
+
+
+/* #activity background edition lists bellow */
+/* #activity .awaza */
+#activity .awaza{
+    position: relative;  
+}
+#activity .awaza::before{
+    content: "";
+    position: absolute;
+    background: url(image/awazaBack.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+}
+
+/* #activity .ff */
+#activity .ff{
+    position: relative;
+}
+#activity .ff::before{
+    content: "";
+    position: absolute;
+    background: url(image/ffback.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+}
+
+/* #activity .tsudo */
+#activity .tsudo{
+    position: relative;
+}
+#activity .tsudo::before{
+    content: "";
+    position: absolute;
+    background: url(image/tsudoBack.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+}
+
+
+/* footer */
+footer{
+    background: #333333;
+    padding: 20px 0;
+    opacity: 0.9;
+}
+small{
+    display: block;
+    text-align: center;
+    color: white;
+}
+
+/* #activity-smartver */
+#activity-smartver{
+    display: none;
+}
+
+
+/* smartphone */
+@media screen and (max-width:600px){
+    /* header */
+
+
+    /* #profile */
+    #profile{
+        position: relative;
+        height: 460px;
+    }
+    #profile h2{
+        font-size: 1.3rem;
+    }
+    #profile .background-rotate{
+        position: absolute;
+        top: -45px;
+        height: 100%;
+        width: 100%;
+        background: #FFFF66;
+        z-index: -1;
+        clip-path: polygon(0 23.5vw, 100% 0, 100% calc(100% - 23.5vw), 0 100%);
+    }
+    #profile .memberLists .member p em{
+        font-weight: bold;
+        font-size: 0.8rem;
+    }
+    #profile .memberLists .member p{
+        text-align: center;
+        font-size: 0.4rem;
+        font-weight: 800;
+        background: #fff;
+        border-radius: 15px;
+        padding: 5px;
+    }
+
+    #profile .member .pic{
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+    }
+
+    /* #leader */
+    #leader .lists{
+        width: 90%;
+    }
+    #leader .lists .name{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    /* #activity-smartver */
+    #activity{
+        display: none;
+    }
+
+    #activity-smartver{
+        display: block;
+    }
+
+    /* Javascript list for smartver */
+    #activity-smartver .maintitleS{
+        text-align: center;
+        margin: 110px auto 180px auto;
+        font-size: 2rem;
+    }
+
+    .subtitleS{
+        color: #000;
+        text-align: center;
+        padding-top: 50px;
+        font-size: 1.8rem;
+        opacity: 0;
+    }
+    #activity-smartver .subtitleS.active{
+        opacity: 1;
+        transition: all 1s;
+    }
+    .viewareaS{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100vh;
+    }
+    #activity-smartver .articleS{
+        width: 100%;
+        color: #000;
+        opacity: 0;
+    }
+    #activity-smartver  .articleS.active{
+        opacity: 1;
+        transition: all 2.5s;
+    }
+    #activity-smartver .articleS> p{
+        width: 90%;
+        margin: 0 auto;
+        padding: 0;
+        font-size: 1.5rem;
+    }
+
+    .img-wrapS{
+        width: 100%;
+        height: 37%;
+        overflow: hidden;
+        opacity: 0;
+    }
+    .img-wrapS.active{
+        opacity: 1;
+        transition: all 2s;
+    }
+    .imgActivityS{
+        width: 90%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+        margin: 0 auto;   
+    }
+    #activity-smartver .awazaS .videoawazaS{
+        width: 90%;
+        height: 37%;
+        margin: 0 auto;
+        opacity: 0;
+    }
+    #activity-smartver .awazaS .videoawazaS.active{
+        opacity: 1;
+        transition: all 2s;
+    }
+
+
+    /* #activity background edition lists bellow for smartver */
+    /* #activity-smartver .awaza */
+    #activity-smartver .awazaS{
+        position: relative;
+
+    }
+    #activity-smartver .awazaS::before{
+        content: "";
+        position: absolute;
+        background: url(image/awazaBack.jpg);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        opacity: 0.2;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -2;
+    }
+    
+
+    /* #activity-smartver .ff */
+    #activity-smartver .ffS{
+        position: relative;
+    }
+    #activity-smartver .ffS::before{
+        content: "";
+        position: absolute;
+        background: url(image/ffback.jpg);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        opacity: 0.2;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -2;
+    }
+
+    /* #activity-smartver .tsudoS */
+    #activity-smartver .tsudoS{
+        position: relative;
+    }
+    #activity-smartver .tsudoS::before{
+        content: "";
+        position: absolute;
+        background: url(image/tsudoBack.jpg);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        opacity: 0.4;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -2;
+    }
+}

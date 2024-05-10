@@ -1,0 +1,383 @@
+html{
+    font-size: 100%; /*16px*/
+    /* width: 960px; */
+}
+body{
+    color: #24292e;
+    font-family: "Noto Serif JP", serif;
+    margin: 0;
+    padding: 0;
+    animation: opacity-body 2s ease-in-out;
+}
+@keyframes opacity-body{
+    0%{
+        opacity: 0;
+    }
+    
+    100%{
+        opacity: 1;
+    }
+}
+body::before{
+    content: "";
+    position: fixed;
+    z-index: -1;
+    pointer-events: none;
+    background: url("image/bodyBackS.jpg");
+    background-size: 100%;
+    background-position: center;
+    inset: 0px;
+    animation: background-image-for-eventB 10s linear 0s infinite normal none;
+}
+@keyframes background-image-for-eventB{
+    0% {
+        transform: translate(-70%, -70%);
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(100%, 100%);
+    }
+}
+
+/* nav */
+header nav{
+    display: block;
+    background-color: #fff;
+    width: 240px;
+    position: fixed;
+    z-index: 4;
+    padding-top: 8px;
+    padding-left: 8px;
+    top: 0;
+    bottom: 0;
+    left: -245px;
+    opacity: 0; 
+    transition:all 0.5s;
+}
+
+.open nav{/* open ver */
+    left: 0;
+    opacity: 1;
+}
+
+header #navlist nav>span{
+    display: block;
+    margin-bottom: 20px;
+}
+
+header #navlist nav span img{
+    object-position: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+}
+
+
+/* .languagechoose */
+header nav .languagechoose{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin: 10px auto;
+}
+
+header nav .languagechoose li:nth-child(1){
+    border-right: 1px solid black;
+}
+
+header nav .languagechoose li a{
+    transition-duration: 0.2s;
+    text-decoration: none;
+    color:#24292e;
+    text-align: center;
+}
+
+header nav .languagechoose li a:hover{
+    background-color: #e4e4e4;
+    
+}
+
+header nav .languagechoose li:nth-child(1) a{
+    padding: 10px 5px 10px 85px;
+}
+
+header nav .languagechoose li:nth-child(2) a{
+    padding: 10px 85px 10px 5px;
+}
+/* end of .languagechoose */
+
+/* .list */
+header .list{
+    display: block;
+    margin: 35px 0;
+    list-style: none;
+}
+
+header .list li{
+    width: 100%;
+    margin: 0;
+}
+
+header .list li a{
+    padding: 25px 0 20px 5px;
+    transition-duration: 0.2s;
+    text-decoration: none;
+    color:#24292e;
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+}
+
+header .list li a:hover{
+    background-color: #e4e4e4;
+}
+/* end of .list */
+    /* end of navlist */
+
+
+/* toggle-btn */
+.toggle-btn{
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 75px;
+    height: 70px;
+    z-index: 4;
+    cursor: pointer;
+    background: #333333;
+    opacity: 0.9;
+}
+
+.toggle-btn span{
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.5s;
+    border-radius: 4px;
+}
+
+.toggle-btn span:nth-child(1){
+    top: 22px;
+    left: 23px;
+}
+
+.toggle-btn span:nth-child(2){
+    top: 35px;
+    left: 23px;
+}
+
+.toggle-btn span:nth-child(3){
+    bottom: 20px;
+    left: 23px;
+}
+
+.open .toggle-btn{
+    background: none;
+}
+.open .toggle-btn span{
+    background-color: #ffffff;
+}
+
+.open .toggle-btn span:nth-child(1){
+    transform: translateY(10px) rotate(-315deg);
+    width: 44px;
+    left: 15px;
+    top: 27px;
+}
+
+.open .toggle-btn span:nth-child(2){
+    opacity: 0;
+}
+
+.open .toggle-btn span:nth-child(3){
+    transform: translateY(-10px) rotate(315deg);
+    width: 44px;
+    left: 15px;
+}
+/* end of toggle */
+
+/* hide */
+#hide{
+    display: none;
+    transition: all 0.5s;
+}
+
+.open #hide{
+    display: block;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    opacity: 0.8;
+    cursor: pointer;
+    z-index: 3;
+}
+/* end of hide */
+
+
+
+/* comingevent */
+
+#comingevent > .title{
+    margin: 0;
+    text-align: center;
+    background: lightblue;
+    padding: 18px 0;
+    opacity: 0.7;
+}
+#comingevent .poster{
+    display: flex;
+    justify-content: flex-start;
+    border: solid #D2B48C 15px;
+    width: 65%;
+    margin: 30px auto;
+}
+#comingevent .poster> article{
+    text-align: left;
+    padding: 25px 20px;
+    margin: 0;
+    font-size: 1rem;
+}
+#comingevent .poster> article p >em{
+    font-weight: bold;
+}
+#comingevent .poster div{
+    width: 320px;
+    height: 425px;
+    overflow: hidden;
+}
+#comingevent .poster div img{
+    width: 100%;
+    height: 100%;
+}
+#comingevent .poster a{
+    transition-duration: 0.2s;
+    
+}
+#comingevent .poster a:hover{
+    background-color: #e4e4e4;
+}
+
+/* pastevent */
+#pastevent > .title{
+    margin: 0 0 10px 0;
+    text-align: center;
+    background: #FFFF66;
+    padding: 18px 0;
+    width: 100%;
+    opacity: 0.7;
+}
+
+/* this is for only smartphone */
+#pastevent .guideTap{
+    display: none;
+}
+
+#pastevent .pic-lists{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+#pastevent .pic-lists .card{
+    width: calc(960px/3);
+    margin: 10px 10px 35px 10px;
+    border: solid #333333 2px;
+
+}
+
+.card a{
+    text-decoration: none;
+    color: #24292e;
+    transition: opacity .25s;
+}
+
+.card a:hover{
+    opacity: 0.5;
+    background-color: #e4e4e4;
+}
+
+.card .img-size{
+    width: 100%;
+    height: 425px;
+}
+
+.card .img-size img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .hashtag{
+    height: 99px;
+    overflow: hidden;
+    padding: 0 15px;
+}
+
+.card .hashtag h4{
+    color: #00376B;
+}
+
+
+
+
+/* footer */
+footer{
+    background: #333333;
+    padding: 20px 0;
+    opacity: 0.9;
+}
+small{
+    display: block;
+    text-align: center;
+    color: white;
+}
+
+
+/* smartphone */
+@media screen and (max-width:600px){
+    /* header */
+
+   
+    /* #comingevent */
+    #comingevent .poster{
+        flex-direction: column;
+        border: solid #D2B48C 5px;
+        width: 80%;
+    }
+    #comingevent .poster div{
+        width: 100%;
+        height: 450px;
+    }
+    #comingevent .poster> article{
+        padding: 15px 10px;
+    }
+
+    /* #pastevent */
+    #pastevent .guideTap::before{
+        content: "↓ ";
+    }
+    #pastevent .guideTap{
+        display: block;
+        text-align: center;
+        background: #FFFF66;
+        border-radius: 20px;
+        margin: 15px auto;
+        padding: 6px 0;
+        font-size: 1rem;
+        width: 90%;
+    }
+    #pastevent .guideTap::after{
+        content: " ↓";
+    }
+}
