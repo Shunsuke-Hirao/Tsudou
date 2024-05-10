@@ -146,7 +146,10 @@ let observer = new IntersectionObserver(setItemActive, options);
 
 
     // to set observer for .subtitleS
-    subtitlesS.map((Ssubtitle)=>{
+    subtitlesS.map((Ssubtitle, index)=>{
+        if(index==1){
+            Ssubtitle.style.marginBottom="50px";
+        }
         observer.observe(Ssubtitle);
     });
 
