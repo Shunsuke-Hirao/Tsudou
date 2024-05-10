@@ -531,7 +531,7 @@ small{
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        height: 100vh;
+        height: 90vh;
     }
     #activity-smartver .articleS{
         width: 100%;
