@@ -208,7 +208,7 @@ header .list li a:hover{
     position: absolute;
 }
 #main .image-title1 p:nth-child(1){
-    top: 30%;
+    top: 31.5%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
