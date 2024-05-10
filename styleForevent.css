@@ -285,13 +285,13 @@ header .list li a:hover{
 #pastevent .pic-lists{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     box-sizing: border-box;
 }
 
 #pastevent .pic-lists .card{
     width: calc(960px/3);
-    margin: 10px 10px 35px 10px;
+    margin: 20px 0;
     border: solid #333333 2px;
 
 }
