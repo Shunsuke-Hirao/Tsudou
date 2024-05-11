@@ -301,7 +301,7 @@ header .list li a:hover{
     
    }
    #main-smartphone > .img-smart{
-    height: 33vh;
+    height: calc(100vh/3);
     
    }
    #main-smartphone > .img-smart picture img{
