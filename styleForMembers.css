@@ -1,10 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Serif JP", serif;
+}
 html{
     font-size: 100%; /*16px*/
     /* width: 960px; */
 }
 body{
     color: #24292e;
-    font-family: "Noto Serif JP", serif;
+    /* font-family: "Noto Serif JP", serif; */
     margin: 0;
     padding: 0; 
     animation: opacity-body 1s ease-in-out;
