@@ -243,8 +243,8 @@ header .list li a:hover{
 }
 #comingevent .poster> article{
     text-align: left;
-    padding: 25px 20px;
-    margin: 0;
+    /* padding: 25px 20px; */
+    margin: auto;
     font-size: 1rem;
 }
 #comingevent .poster> article p >em{
@@ -285,13 +285,15 @@ header .list li a:hover{
 #pastevent .pic-lists{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    box-sizing: border-box;
+    /* justify-content: space-around; */
+    /* box-sizing: border-box; */
+    width: 90%;
+    margin: 0 auto;
 }
 
 #pastevent .pic-lists .card{
-    width: calc(960px/3);
-    margin: 20px 0;
+    width: calc(100%/3);
+    margin: 20px auto;
     border: solid #333333 2px;
 
 }
@@ -364,6 +366,12 @@ small{
     }
 
     /* #pastevent */
+    #pastevent .pic-lists .card{
+        width: 100%;
+        margin: 20px auto;
+        border: solid #333333 2px;
+    
+    }
     #pastevent .guideTap::before{
         content: "↓ ";
     }
