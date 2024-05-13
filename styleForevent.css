@@ -242,15 +242,13 @@ header .list li a:hover{
 }
 #comingevent .poster{
     display: flex;
-    justify-content: flex-start;
+    /* justify-content: space-between; */
     border: solid #D2B48C 15px;
     width: 65%;
     margin: 30px auto;
 }
 #comingevent .poster> article{
-    text-align: left;
-    /* padding: 25px 20px; */
-    margin: auto;
+    margin: 5px auto 5px 15px;
     font-size: 1rem;
 }
 #comingevent .poster> article p >em{
@@ -368,7 +366,10 @@ small{
         height: 450px;
     }
     #comingevent .poster> article{
-        padding: 15px 10px;
+        text-align: left;
+        font-size: 0.9rem;
+        margin: 5px auto;
+        width: 90%;
     }
 
     /* #pastevent */
